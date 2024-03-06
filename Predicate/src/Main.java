@@ -3,6 +3,7 @@ import util.ProductPredicate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,8 +24,14 @@ public class Main {
         // list.removeIf(Product::staticProductPredicate);
 
         //Implementação com Method Reference com método Estático:
-         list.removeIf(Product::nonStaticProductPredicate);
+        //list.removeIf(Product::nonStaticProductPredicate);
 
+        //Expressão Lambda Declarada
+        //Predicate<Product> pred = p -> p.getPrice() >= 100;
+        //list.removeIf(pred);
+
+        // Expressão Lambda Inline:
+        list.removeIf(p -> p.getPrice() >= 100);
 
         for (Product p : list){
             System.out.println(p);
