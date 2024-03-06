@@ -14,10 +14,17 @@ public class Main {
         list.add(new Product("HD Case", 80.90));
 
         //Instanciação da clase que implementa o Predicate;
-        list.removeIf(new ProductPredicate());
+        //list.removeIf(new ProductPredicate());
 
         // Implementação básica de Predicado;
         //list.removeIf(p -> p.getPrice() >= 100);
+
+        //Implementação com Method Reference com método Estático:
+        // list.removeIf(Product::staticProductPredicate);
+
+        //Implementação com Method Reference com método Estático:
+         list.removeIf(Product::nonStaticProductPredicate);
+
 
         for (Product p : list){
             System.out.println(p);
