@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -12,8 +13,26 @@ public class Main {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+        // Implementando a Interface
+        //List<String> names = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
+        //names.forEach(System.out::println);
+
+        // Reference Method com método estático:
+        //List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+
+        // Reference Method com método normal:
+        //List<String> names = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
+
+        //Expressão Lambda Declarada
+        //Function<Product, String> func = p -> p.getName().toUpperCase();
+        //List<String> names = list.stream().map(func).collect(Collectors.toList());
+
+        //Expressão Lambda Inline:
+        List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+
 
         names.forEach(System.out::println);
+
+
     }
 }
