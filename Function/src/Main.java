@@ -28,10 +28,16 @@ public class Main {
         //List<String> names = list.stream().map(func).collect(Collectors.toList());
 
         //Expressão Lambda Inline:
-        List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+        //List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
+        //names.forEach(System.out::println);
 
+        ProductService ps = new ProductService();
 
-        names.forEach(System.out::println);
+        double sum = ps.filteredSum(list, p -> p.getName().charAt(0) == 'T');
+
+        double soma = ps.filteredSum(list, p -> p.getPrice() > 100);
+
+        System.out.println("Sum: " + String.format("%.2f", sum));
 
 
     }
