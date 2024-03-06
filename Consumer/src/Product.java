@@ -27,7 +27,17 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "name='" + name + '\'' +
-                ", price=" + price +
+                ", price=" + String.format("%.2f", price) +
                 '}';
+    }
+    // Implementação com Reference Method com método Estático:
+    public static void staticPriceUpDate(Product p){
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
+    //Implementação com método não estático:
+
+    public void nonStaticUpDate(){
+        price = price * 1.1;
     }
 }
