@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/Predicate/Predicate.iml" filepath="$PROJECT_DIR$/Predicate/Predicate.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgramFuncional/ProgramFuncional.iml" filepath="$PROJECT_DIR$/ProgramFuncional/ProgramFuncional.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programacao_funcional_Expressoes_Lambda.iml" filepath="$PROJECT_DIR$/Programacao_funcional_Expressoes_Lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stream_Exercicio/Stream_Exercicio.iml" filepath="$PROJECT_DIR$/Stream_Exercicio/Stream_Exercicio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Streams/Streams.iml" filepath="$PROJECT_DIR$/Streams/Streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Streams_Exerc_FIX/Streams_Exerc_FIX.iml" filepath="$PROJECT_DIR$/Streams_Exerc_FIX/Streams_Exerc_FIX.iml" />
     </modules>
   </component>
 </project>
